@@ -1,147 +1,98 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#10251f">
-<title>CISSP 8ドメイン 800問クイズ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10251f">
+<title>CISSP 合格対策｜厳選64問</title>
 <style>
-:root{color-scheme:light;--ink:#17211d;--muted:#58645f;--green:#087456;--pale:#eaf5f0;--line:#d9e3de;--bad:#9b2f2f;--good:#146c43}*{box-sizing:border-box}body{margin:0;background:#f3f6f4;color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:760px;margin:0 auto;padding:16px 14px 32px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:4px 2px 12px;color:var(--muted);font-size:.9rem}.top strong{color:var(--ink);font-size:1rem}.selector{width:100%;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);margin-bottom:13px}.bar{height:6px;background:#dce5e0;border-radius:9px;overflow:hidden;margin-bottom:16px}.bar span{display:block;width:0;height:100%;background:var(--green);transition:width .2s}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:20px 16px;box-shadow:0 8px 24px #17352b0d}.tag{display:inline-block;color:var(--green);background:var(--pale);font-weight:700;border-radius:99px;padding:4px 11px;font-size:.8rem}h1{font-size:1.24rem;line-height:1.5;margin:13px 0 14px}fieldset{border:0;padding:0;margin:0}legend{font-weight:650;margin-bottom:10px}.choice{display:flex;gap:11px;align-items:flex-start;padding:12px;margin:9px 0;border:1px solid var(--line);border-radius:14px;cursor:pointer;min-height:50px}.choice:has(input:checked){border-color:var(--green);background:var(--pale)}.choice input{margin-top:5px;accent-color:var(--green);flex:none}.choice span{flex:1}button{font:inherit;font-weight:700;border:0;border-radius:13px;padding:13px 18px;min-height:48px;cursor:pointer}.primary{width:100%;background:var(--green);color:white;margin-top:12px}.primary:disabled{opacity:.45;cursor:not-allowed}.secondary{background:#e8eeea;color:var(--ink);margin-top:12px;width:100%}.feedback{margin-top:15px;padding:14px;border-radius:14px}.feedback.good{background:#e9f6ee;color:#144b30}.feedback.bad{background:#fff0ed;color:#702626}.feedback strong{display:block;margin-bottom:5px}.hidden{display:none}.foot{font-size:.79rem;color:var(--muted);margin:14px 4px 0}.result{text-align:center;padding:12px 4px}.score{font-size:2.5rem;font-weight:800;color:var(--green);margin:3px}.result-list{text-align:left;margin:18px 0 0;padding:0;list-style:none}.result-list li{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:9px 2px}.source{color:var(--muted)}a{color:#086b51}@media(min-width:560px){main{padding-top:28px}.card{padding:26px}}
+:root{color-scheme:light;--ink:#17211d;--muted:#58645f;--green:#087456;--pale:#eaf5f0;--line:#d9e3de;--bad:#9b2f2f;--good:#146c43}
+*{box-sizing:border-box}body{margin:0;background:#f3f6f4;color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:780px;margin:0 auto;padding:16px 14px 36px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:4px 2px 14px;color:var(--muted);font-size:.9rem}.top strong{color:var(--ink);font-size:1.08rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 16px;box-shadow:0 8px 24px #17352b0d}.intro{margin:4px 0 16px}.selector{width:100%;font:inherit;padding:12px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);margin:6px 0 12px}
+button{font:inherit;font-weight:700;border:0;border-radius:13px;padding:13px 18px;min-height:48px;cursor:pointer}.primary{width:100%;background:var(--green);color:white;margin-top:10px}.secondary{background:#e8eeea;color:var(--ink);margin-top:10px;width:100%}.tertiary{background:#fff;color:var(--ink);border:1px solid var(--line);margin-top:10px;width:100%}button:disabled{opacity:.45;cursor:not-allowed}
+.hidden{display:none!important}.bar{height:6px;background:#dce5e0;border-radius:9px;overflow:hidden;margin:16px 0}.bar span{display:block;width:0;height:100%;background:var(--green);transition:width .2s}
+.tag{display:inline-block;color:var(--green);background:var(--pale);font-weight:700;border-radius:99px;padding:4px 11px;font-size:.8rem}h1{font-size:1.22rem;line-height:1.55;margin:13px 0 14px}h2{font-size:1.05rem;margin:22px 0 8px}.meta{font-size:.88rem;color:var(--muted)}fieldset{border:0;padding:0;margin:0}legend{font-weight:700;margin:8px 0}.choice{display:flex;gap:11px;align-items:flex-start;padding:12px;margin:9px 0;border:1px solid var(--line);border-radius:14px;cursor:pointer;min-height:50px}.choice:has(input:checked){border-color:var(--green);background:var(--pale)}.choice input{margin-top:6px;accent-color:var(--green);flex:none}.choice span{flex:1}
+.feedback{margin-top:15px;padding:14px;border-radius:14px}.feedback.good{background:#e9f6ee;color:#144b30}.feedback.bad{background:#fff0ed;color:#702626}.feedback strong{display:block;margin-bottom:5px}.feedback p{margin:6px 0 0}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button{width:100%}.result{text-align:center;padding:12px 4px}.score{font-size:2.4rem;font-weight:800;color:var(--green);margin:3px}.result-list{ text-align:left;margin:16px 0 0;padding:0;list-style:none}.result-list li{border-top:1px solid var(--line);padding:11px 2px}.wrong-item{border:1px solid var(--line);border-radius:14px;padding:13px;margin:11px 0;text-align:left}.wrong-item strong{display:block}.correct{color:var(--good);font-weight:700}.muted{color:var(--muted)}.save-note{font-size:.86rem;color:var(--muted);text-align:center;margin:8px 0}.foot{font-size:.82rem;color:var(--muted);margin:16px 4px 0}.foot p{margin:8px 0}.home-msg{padding:12px;background:var(--pale);border-radius:12px;margin-bottom:12px}
+a{color:#086b51}@media(min-width:560px){main{padding-top:28px}.card{padding:26px}.actions{gap:12px}}
 </style>
 </head>
-<body><main>
-<div class="top"><strong>CISSP 練習クイズ</strong><span id="count"></span></div>
-<label for="domain" class="source">出題範囲</label><select id="domain" class="selector" aria-label="出題範囲"></select>
-<button class="secondary" id="reviewWrong" type="button" disabled>間違えた問題を復習（0問）</button>
-<button class="primary" id="startTest" type="button">全ドメイン混合テスト（80問）を始める</button>
-<button class="secondary hidden" id="resumeTest" type="button">保存したテストを再開</button>
-<div class="bar" aria-label="進捗"><span id="progress"></span></div><section class="card" id="quiz" aria-live="polite"></section>
-<p class="foot">各ドメイン100問、計800問。各ドメイン10テーマを異なる業種・システムのケースで反復する形式です。書籍の設問・選択肢・解説は転載していません。ドメイン構成は<a href="https://www.isc2.org/certifications/cissp/cissp-certification-exam-outline" target="_blank" rel="noreferrer">ISC2公式アウトライン</a>を参照しています。問題は学習用のオリジナル問題で、公式問題ではありません。</p>
+<body>
+<main>
+  <div class="top"><strong>CISSP 合格対策</strong><span id="count"></span></div>
+  <section class="card intro">
+    <span class="tag">独自作成・厳選64問</span>
+    <h1>用語の暗記だけでなく、状況に応じた判断を練習します</h1>
+    <p class="muted">ドメイン選択で解説付きの学習、または全分野の模擬演習ができます。問題は場面だけを置き換えた反復ではなく、それぞれ別の判断課題です。</p>
+    <label for="domain">学習するドメイン</label>
+    <select id="domain" class="selector" aria-label="学習するドメイン"></select>
+    <button class="primary" id="study">この範囲を学ぶ</button>
+    <button class="secondary" id="exam">全分野の模擬演習（64問）</button>
+    <button class="secondary hidden" id="resume">保存した演習を再開</button>
+    <button class="tertiary" id="review" disabled>間違えた問題を復習（0問）</button>
+    <p id="saveNote" class="save-note">途中保存はこの端末のブラウザー内に記録されます。</p>
+  </section>
+  <div class="bar" aria-label="進捗"><span id="progress"></span></div>
+  <section class="card" id="quiz" aria-live="polite"></section>
+  <div class="foot">
+    <p>64問の学習用セットです。出題数の配分はISC2のドメイン比重に近づけていますが、全ての小項目を網羅する問題集や、CAT方式の本番模試ではありません。正解だけでなく、解説と公式アウトラインも確認してください。</p>
+    <p>試験概要の参照：<a href="https://www.isc2.org/certifications/cissp/cissp-certification-exam-outline" target="_blank" rel="noreferrer">ISC2 CISSP Exam Outline</a>（現行日本語アウトラインの実施日 2024年4月15日）。本番のCISSP試験はCAT方式で100〜150問、最大3時間です。問題は学習用の独自作成で、公式問題ではありません。</p>
+  </div>
 </main>
+<script src="questions.js"></script>
 <script>
-const domains=[
-{name:'ドメイン1｜セキュリティとリスクマネジメント',scenes:['金融機関の決済サービス','医療機関の患者情報システム','自治体の住民サービス','クラウドSaaS事業者','製造業の生産ネットワーク','大学の研究データ環境','小売企業のオンラインストア','物流会社の倉庫システム','保険会社の契約管理','通信事業者の顧客基盤'],seeds:[
-{t:'リスク所有者',q:'重大な事業リスクを受け入れるか、対策を選ぶ最終責任者は誰ですか？',a:'該当業務のリスク所有者',w:['セキュリティ製品の販売担当者','外部監査人','一般利用者の代表'],e:'リスク受容は事業上の影響を引き受けるリスク所有者が判断します。セキュリティ部門は分析と対策案を助言します。'},
-{t:'事業影響分析',q:'停止時の影響と復旧優先順位を定めるため、最初に行う分析は何ですか？',a:'事業影響分析（BIA）',w:['侵入テスト','ソースコードレビュー','脆弱性スキャン'],e:'BIAは業務停止の影響、重要な依存関係、復旧優先順位や目標を把握します。'},
-{t:'定量的リスク',q:'年間損失予測額を算出した後、対策の費用対効果を評価する次の作業は？',a:'対策費用と期待損失の低減額を比較する',w:['資産台帳を削除する','発生率を必ずゼロと仮定する','リスク所有者を変更する'],e:'ALEを用い、対策コストと期待損失の減少を比較して費用対効果を評価します。'},
-{t:'デューデリジェンス',q:'委託先のセキュリティ状況を契約後も継続して調べる活動は？',a:'デューデリジェンス',w:['職務分掌','データ最小化','変更凍結'],e:'デューデリジェンスは相手や状況を調査・確認し続ける活動です。契約前だけで終わらせません。'},
-{t:'リスク対応',q:'保険契約で損失の金銭的影響の一部を第三者へ移す対応は？',a:'リスク移転',w:['リスク回避','リスク受容','リスク低減'],e:'保険や契約条項は損失の一部を移転できますが、リスクそのものが消えるとは限りません。'},
-{t:'ポリシー',q:'経営層が示す高レベルのセキュリティ方針を定める文書は？',a:'ポリシー',w:['手順書','作業記録','構成ベースライン'],e:'ポリシーは組織の高レベルの方針を示します。標準は必須要件を具体化し、手順書は実施方法を説明します。'},
-{t:'職務分掌',q:'同じ担当者が支払先登録と支払い承認を行える状態で、優先して適用する原則は？',a:'職務分掌',w:['オープンアクセス','冗長化','フェイルオープン'],e:'重要な処理を複数の役割に分け、単独の不正や誤りが見逃される可能性を下げます。'},
-{t:'人員セキュリティ',q:'退職者のアクセス停止と機器回収を確実にする主な手続きは？',a:'退職時の人事・アカウント連携手続き',w:['毎月の資産棚卸しだけ','全利用者の権限拡大','監査記録の短縮'],e:'退職時の連携で不要なアクセスを止め、貸与資産を回収し、継続する義務を確認します。'},
-{t:'倫理',q:'個人的な利害が調達判断に影響する可能性を認識した担当者がまず取るべき行動は？',a:'利害関係を開示し、定められた管理者へ相談する',w:['関係を隠して単独で決める','記録を削除する','入札条件を自分に有利に変える'],e:'利益相反は開示して組織の倫理・調達手順に従い、判断の公正性を保ちます。'},
-{t:'セキュリティ教育',q:'フィッシング対策教育が有効か測る方法として最も適切なのは？',a:'訓練結果や報告率などの指標を定期評価する',w:['受講者数だけを一度数える','教材を永久に更新しない','教育後の報告窓口を閉じる'],e:'受講率だけでなく、模擬訓練の反応や報告率などで行動変化とプログラムの有効性を評価します.'}
-]},
-{name:'ドメイン2｜資産のセキュリティ',scenes:['人事記録を扱う企業','医療情報を扱う病院','決済データを保管する金融機関','研究データを管理する大学','顧客情報を扱う小売企業','クラウドストレージ事業者','製造図面を扱う工場','政府機関の文書管理部門','物流会社の携帯端末管理','保険契約を保管する事業者'],seeds:[
-{t:'データ分類',q:'機密性に基づくデータ分類レベルを決める責任者は？',a:'データ所有者',w:['バックアップ担当者','一般利用者','ネットワーク運用者'],e:'データ所有者は分類と利用要件を決定し、カストディアンはその指示に従い保護策を運用します。'},
-{t:'カストディアン',q:'所有者が定めた分類に沿ってバックアップやアクセス制御を日々運用する役割は？',a:'データカストディアン',w:['データ主体','外部監査人','データ所有者だけ'],e:'カストディアンは所有者の決定を実装・運用する管理役割です。'},
-{t:'保持・廃棄',q:'保持期間が終了し、法的保全も不要な情報に行うことは？',a:'承認された手順で安全に消去・廃棄する',w:['無期限に保存する','誰でも読める場所へ移す','分類表示だけを外して保持する'],e:'業務・法令上の保持要件を確認した後、承認された方法で廃棄します。'},
-{t:'データ最小化',q:'利用目的に必要な情報だけを収集する原則は？',a:'データ最小化',w:['職務分掌','多層防御','フェイルオーバー'],e:'データ最小化は収集・保持する情報を目的に必要な範囲へ限定します。'},
-{t:'保存データ保護',q:'端末紛失時にストレージ上の情報を読まれる危険を直接下げる対策は？',a:'ディスク全体の暗号化',w:['壁紙変更','ログ保存期間の延長','公開DNSの利用'],e:'保存データを暗号化すると、端末や媒体が盗まれた際の読み取りリスクを抑えられます。'},
-{t:'転送中データ',q:'外部サービスへ送信する機密データを保護する一般的な対策は？',a:'検証済みの暗号化通信を利用する',w:['平文で送る','共有フォルダーを公開する','暗号化鍵を同じメールで送る'],e:'転送中のデータは適切な暗号化通信と証明書検証で保護します。'},
-{t:'媒体廃棄',q:'機密データを含むSSDを再利用せず廃棄する際、最も確実な方法は？',a:'組織基準に沿った安全な消去または物理破壊を確認する',w:['ファイル名を変更する','ごみ箱を空にするだけ','ラベルをはがす'],e:'SSDでは通常の上書きが全領域に及ばないことがあります。媒体と機密度に合った認定消去・破壊を行います。'},
-{t:'法的保全',q:'訴訟通知が届き、通常の削除期限を迎える記録がある場合の対応は？',a:'関連記録の通常廃棄を停止し、法的保全を実施する',w:['予定どおり削除する','保全対象を編集する','全記録を公表する'],e:'法的保全の指示がある場合、対象データの削除・変更を停止し、保全範囲を管理します。'},
-{t:'資産台帳',q:'未承認の機器やソフトウェアを見つけやすくする基礎となる管理策は？',a:'最新の資産インベントリを維持する',w:['全端末で共通管理者IDを使う','変更履歴を残さない','資産所有者を記録しない'],e:'正確な資産台帳は、所有者、場所、重要度、保護状況を把握し、リスク管理の基盤になります。'},
-{t:'バックアップ移送',q:'外部保管へバックアップ媒体を渡す際に行うべきことは？',a:'暗号化し、受け渡しと保管状態を記録する',w:['媒体を無記名で渡す','公開リンクを作る','アクセス記録を無効化する'],e:'暗号化で紛失時の露出を減らし、受け渡し記録で所在と管理責任を追跡します。'}
-]},
-{name:'ドメイン3｜セキュリティアーキテクチャとエンジニアリング',scenes:['仮想化基盤を設計するチーム','クラウド上の業務アプリ','産業制御システム','社内認証基盤','IoT機器を展開する事業者','データセンターの物理設備','機密文書を扱うシステム','多層Webサービス','新規決済システム','端末の起動プロセス'],seeds:[
-{t:'Bell-LaPadula',q:'機密性モデルBell-LaPadulaの代表的な規則は？',a:'上位機密を読まず、下位へ書き下さない',w:['低い完全性から高い完全性へ書く','誰でも全情報を読む','認証なしで書く'],e:'Bell-LaPadulaは機密性を保護し、「no read up」「no write down」が代表ルールです。'},
-{t:'Biba',q:'完全性を重視するBibaモデルの代表的な規則は？',a:'低い完全性の情報を読まず、高い完全性から下位へ書かない',w:['上位機密を読まず下位へ書かない','暗号化を必ず無効にする','認証を省く'],e:'Bibaは完全性モデルで、低い完全性レベルからの不適切な入力と上位への汚染を防ぎます。'},
-{t:'最小権限',q:'管理者権限を業務時間中だけ必要とする場合の適切な設計は？',a:'必要な時だけ承認を得て昇格し、終了後に権限を戻す',w:['常時管理者権限を付与する','共有IDを配布する','監査ログを無効にする'],e:'最小権限と時間制限付きの昇格により、特権の露出時間と悪用範囲を減らします。'},
-{t:'多層防御',q:'一つの防御策が破られても他の制御が侵害拡大を抑える設計原則は？',a:'多層防御',w:['単一障害点への集中','全許可','暗黙の信頼'],e:'異なる層に複数の制御を置き、一つの失敗だけで全体が破られないようにします。'},
-{t:'フェイルセキュア',q:'認証サービスの障害時に保護対象へのアクセスを拒否する設計は？',a:'フェイルセキュア',w:['フェイルオープン','無条件許可','ベストエフォート'],e:'フェイルセキュアは障害時に安全側へ倒し、許可を確認できないアクセスを拒否します。'},
-{t:'セキュアな初期設定',q:'明示的に許可された通信だけ通し、それ以外は拒否する初期方針は？',a:'デフォルト拒否',w:['デフォルト許可','共有アクセス','暗黙の信頼'],e:'デフォルト拒否は許可リストにないアクセスを拒否し、未定義の経路を閉じます。'},
-{t:'TPMと測定起動',q:'起動時の測定値や暗号鍵を保護し、起動構成の検証を支援する部品は？',a:'TPM',w:['ロードバランサー','ネットワークハブ','プロキシキャッシュ'],e:'TPMは測定値や鍵を保護するハードウェア機能を提供し、信頼できる起動を支援します。'},
-{t:'プライバシー設計',q:'個人情報を扱う新機能で、必要最小限の収集と保護を設計初期から組み込む考え方は？',a:'プライバシー・バイ・デザイン',w:['後付けの監査だけ','デフォルト公開','データ無期限保持'],e:'プライバシー・バイ・デザインは、設計・初期設定からプライバシー保護を組み込みます。'},
-{t:'共有責任',q:'クラウド利用者がIaaS上のゲストOSのパッチを担当する理由は？',a:'基盤提供者との責任分担で、ゲストOSは利用者側の管理範囲だから',w:['クラウド事業者が全レイヤーを必ず管理するから','責任共有は存在しないから','パッチは不要だから'],e:'クラウドでは責任がサービスモデルごとに分かれます。IaaS利用者は通常、ゲストOSやアプリを管理します。'},
-{t:'脅威モデリング',q:'新システムの設計段階で攻撃経路と必要な対策を整理する主な利点は？',a:'設計変更が容易な時期にリスクを減らせる',w:['全テストを省略できる','本番後の修正が必ず不要になる','利用者認証をなくせる'],e:'早期の脅威モデリングは設計や要件を調整しやすくし、後工程の高コストな修正を減らします。'}
-]},
-{name:'ドメイン4｜通信とネットワークセキュリティ',scenes:['支店間ネットワーク','遠隔勤務者の接続','公開Webサービス','無線LAN環境','クラウド接続点','データセンターの境界','DNS基盤','工場ネットワーク','外部委託先との接続','社内管理ネットワーク'],seeds:[
-{t:'セグメンテーション',q:'侵害端末から他のサーバーへの横移動を抑える設計は？',a:'ネットワークを分割し、必要な通信だけ許可する',w:['全てを平坦なLANにする','内部通信を無制限に許可する','境界制御を撤去する'],e:'セグメンテーションと最小限の通信許可で、侵害後に到達できる範囲を小さくします。'},
-{t:'TLS証明書',q:'TLS接続でサーバー証明書を検証する目的は？',a:'接続先の身元と証明書の有効性を確認する',w:['通信速度を必ず上げる','端末を匿名化する','データを圧縮する'],e:'証明書検証で意図した接続先か、信頼チェーンや有効期限などが妥当か確認します。'},
-{t:'リモートアクセス',q:'外出先から社内へ接続する通信を保護する一般的な方法は？',a:'認証と暗号化を備えたリモートアクセスVPN',w:['Telnet管理接続','公開Wi-Fiへの自動接続','共有パスワードのメール送信'],e:'適切に構成されたVPNは認証と暗号化されたトンネルでリモート通信を保護します。'},
-{t:'IDSとIPS',q:'検知した不正通信をインラインで自動遮断する機能を持つものは？',a:'IPS',w:['受動監視だけのIDS','DHCP','ロードバランサーだけ'],e:'IPSは通信経路上で検知した脅威を遮断できます。IDSは通常、検知・通知が中心です。'},
-{t:'DNSSEC',q:'DNSSECが主に保護するものは？',a:'DNS応答データの真正性と完全性',w:['DNS問い合わせの暗号化','Web本文の暗号化','端末のマルウェア除去'],e:'DNSSECは署名によってDNSデータの真正性と完全性を検証します。通信自体の暗号化とは別です。'},
-{t:'無断アクセスポイント',q:'承認されていないAPが社内LANへ接続されていると分かった時の適切な初動は？',a:'影響を確認し、手順に従って安全に封じ込める',w:['正規APとして台帳登録する','無線監視を止める','暗号化を無効にする'],e:'無断APは攻撃者の入口になり得ます。証拠と影響を確認し、インシデント手順に沿って対処します。'},
-{t:'DDoS対策',q:'大規模な分散型サービス拒否攻撃で回線が飽和している場合、最も効果的な支援先は？',a:'上流ISPやDDoS緩和サービスと連携する',w:['感染端末のローカルFWだけ更新する','ログを削除する','DNSSECを有効にするだけ'],e:'回線飽和では組織境界より上流でのスクラビングやルーティング支援が必要になることがあります。'},
-{t:'NAC',q:'ネットワーク接続前に端末の認証や準拠状態を確認し、アクセスを制御する仕組みは？',a:'ネットワークアクセス制御（NAC）',w:['NTP','NATだけ','DNSキャッシュ'],e:'NACは端末や利用者の認証、姿勢評価、接続先制限を支援します。'},
-{t:'安全な管理通信',q:'暗号化されていないTelnetの代替としてリモート管理に使うべきものは？',a:'SSH',w:['FTP','HTTP','rlogin'],e:'SSHは管理セッションを暗号化し、Telnetなどの平文管理より安全です。'},
-{t:'無線認証',q:'企業無線LANで利用者や端末ごとの証明書認証を導入する方式として適切なのは？',a:'802.1XとEAP-TLS',w:['共有WEPキー','オープン認証','SSID非表示だけ'],e:'802.1X/EAP-TLSは証明書に基づく強い認証と利用者・端末単位の管理に使えます。'}
-]},
-{name:'ドメイン5｜アイデンティティとアクセス管理',scenes:['管理者アカウントの運用','全社SSOの導入','クラウドサービスの利用','異動者の権限変更','外部委託者のアクセス','機密データへのアクセス','物理施設の入退室','APIサービス認証','共有端末の運用','特権セッション管理'],seeds:[
-{t:'MFA',q:'パスワードとスマートカードを組み合わせると多要素認証になる理由は？',a:'知識要素と所持要素という異なる種類を使うから',w:['パスワードを二度入力するから','カードを二枚使うから','利用者名が長いから'],e:'MFAは知識・所持・生体など異なる要素カテゴリを二つ以上組み合わせます。'},
-{t:'RBAC',q:'職務上の役割に基づいてアクセス権をまとめて割り当てる方式は？',a:'RBAC',w:['単一要素認証','MACアドレスフィルタリング','データ分類'],e:'RBACは役割に権限を割り当て、利用者を役割へ関連付けて管理します。'},
-{t:'ABAC',q:'利用者、リソース、場所、時刻などの属性を評価してアクセスを決める方式は？',a:'ABAC',w:['RBACだけ','静的パスワード','データ消去'],e:'ABACは複数の属性や条件をポリシー評価に用いるため、細かな動的制御ができます。'},
-{t:'フェデレーション',q:'組織間の信頼関係を使い、外部サービスへのサインインを連携する仕組みは？',a:'フェデレーション',w:['エアギャップ','データマスキング','負荷分散'],e:'フェデレーションは信頼関係に基づいて認証情報やアサーションを連携し、SSOなどを実現します。'},
-{t:'PAM',q:'高権限認証情報を保管し、利用承認・記録・ローテーションを行う仕組みは？',a:'特権アクセス管理（PAM）',w:['DHCP','データ分類表','公開証明書一覧'],e:'PAMは特権アカウントとセッションを管理し、認証情報の露出と不正使用を抑えます。'},
-{t:'最小権限',q:'職務に不要な特権を持つアカウントを見つけた時の適切な対応は？',a:'必要な権限だけに縮小する',w:['全員に同じ特権を付ける','共有IDへ移す','監査を停止する'],e:'最小権限は業務に必要な範囲だけを付与し、過剰な権限を削除する原則です。'},
-{t:'異動・退職管理',q:'利用者が別職務へ異動した際の適切なIAM手続きは？',a:'新職務の権限を付与し、不要になった旧権限を削除する',w:['旧権限を永久に残す','監査ログを消す','共有管理者IDを使う'],e:'Joiner-Mover-Leaver手続きで役割変更をアクセス権へ反映し、不要な権限を残さないようにします。'},
-{t:'認証疲労攻撃',q:'大量のMFAプッシュ通知を送り、利用者に誤承認させる攻撃への対策は？',a:'番号照合や文脈表示など、承認要求を検証しやすくする',w:['通知を無制限に送る','MFAを全員で共有する','監査ログを無効化する'],e:'番号照合や送信元・接続情報の表示、レート制限などで誤承認を抑えます。'},
-{t:'アクセス再認証',q:'重要システムの権限が職務に適切かを定期的に確認する手続きは？',a:'アクセス権の定期レビューと再認証',w:['データ圧縮','DNS更新','バックアップ復元'],e:'権限レビューにより、不要・過剰・古いアクセスを発見して削除します。'},
-{t:'生体認証',q:'生体認証システムで誤受入率（FAR）が高いと、どのリスクが増えますか？',a:'他人を正規利用者として誤認するリスク',w:['正規利用者を拒否する率だけ','通信遅延','データ保持期間'],e:'FARは不正な利用者を正規と判定する割合です。本人を拒否する割合はFRRです。'}
-]},
-{name:'ドメイン6｜セキュリティの評価とテスト',scenes:['年次の統制評価','公開サーバーの検査','クラウド設定レビュー','内部監査の準備','委託先の評価','アプリケーション評価','脆弱性管理会議','監視プログラムの改善','変更後の検証','経営層向け報告'],seeds:[
-{t:'脆弱性スキャン',q:'既知の脆弱性や設定不備を広く自動検出する手法は？',a:'脆弱性スキャン',w:['事業影響分析','災害復旧演習','従業員面接だけ'],e:'スキャンは既知の弱点や設定不備を効率よく列挙します。'},
-{t:'侵入テスト',q:'許可された範囲で弱点を実際に悪用し、侵入可能性と影響を示す評価は？',a:'侵入テスト',w:['資産棚卸し','構成ベースライン','バックアップ検証'],e:'侵入テストは定義された範囲とルールに沿い、攻撃を模擬して実際の影響を確認します。'},
-{t:'評価範囲',q:'テスト開始前に対象・方法・成功条件・証拠の扱いを合意する理由は？',a:'再現性を保ち、範囲外の影響を避けるため',w:['結果を事前に有利にするため','ログを消すため','承認を不要にするため'],e:'明確なルールは、業務影響を抑え、評価結果を説明・再現できるようにします。'},
-{t:'独立性',q:'自分が設計・実装した管理策を自分だけで監査することの主な問題は？',a:'独立性と客観性が損なわれる可能性がある',w:['ネットワーク帯域が増える','暗号化が強くなる','記録保持が不要になる'],e:'評価者の独立性は、利益相反や自己レビューのリスクを抑えます。'},
-{t:'サンプリング',q:'大量の取引記録から代表的な一部を選んで統制を確認する際に必要な考慮は？',a:'母集団と抽出方法が結論を支えるか確認する',w:['都合のよい記録だけ選ぶ','抽出条件を記録しない','全ての証拠を削除する'],e:'母集団、抽出方法、サンプル数が不適切だと、結論の信頼性が損なわれます。'},
-{t:'誤検知',q:'スキャナーの重大指摘が実際の構成と一致しない可能性がある時の適切な対応は？',a:'証拠を確認して妥当性を検証する',w:['即座に全て公開する','記録を削除する','全ての指摘を無条件に無視する'],e:'誤検知を含む可能性があるため、対象環境や証拠を確認し、真陽性か判断します。'},
-{t:'構成レビュー',q:'承認済みの安全な設定から逸脱していないことを確認する評価は？',a:'構成ベースラインとの比較',w:['利益相反申告','データ最小化','事業継続訓練だけ'],e:'承認済みベースラインと実環境を比較すると、未承認変更や設定逸脱を検出できます。'},
-{t:'指標',q:'脆弱性管理の改善状況を測る指標として有用なのは？',a:'重大脆弱性の修正までに要した時間',w:['壁紙の種類','会議室予約数','利用者の通勤時間'],e:'重大度別の未修正件数や修正までの時間は、対応速度と残存リスクを示します。'},
-{t:'継続的監視',q:'統制の状態を一度の年次確認だけでなく継続して把握する活動は？',a:'継続的監視',w:['一回限りの棚卸し','インシデント記録の削除','全変更の禁止'],e:'継続的監視は、変化する環境で統制状態とリスクを定期・継続的に把握します。'},
-{t:'是正措置',q:'評価で重大な不備が見つかった後、是正の完了と有効性を確かめる方法は？',a:'責任者・期限・証拠を定め、再テストで確認する',w:['指摘を口頭で閉じる','ログを削除する','未対応のまま評価を終了する'],e:'是正計画に責任者と期限を置き、証拠や再評価で実際に解消したことを確認します。'}
-]},
-{name:'ドメイン7｜セキュリティの運用',scenes:['ランサムウェア対応','データセンターの復旧','従業員端末の監視','証拠を伴う調査','本番変更の承認','バックアップ運用','拠点の物理保護','ログ監視体制','災害対応訓練','重大脆弱性への対応'],seeds:[
-{t:'封じ込め',q:'ランサムウェアが複数端末へ拡大している疑いがある時の初動は？',a:'影響端末やネットワークを隔離して拡大を抑える',w:['証拠を残さず初期化する','全バックアップをオンライン共有する','管理者パスワードを配布する'],e:'封じ込めで拡大を抑え、証拠を保全しながらインシデント手順に従います。'},
-{t:'証拠保全',q:'デジタル証拠の受け渡し時に記録すべき事項は？',a:'誰が、いつ、何を、どの状態で受け渡したか',w:['担当者の通勤経路','端末の購入価格だけ','無関係な資産番号'],e:'保管連鎖は証拠の識別・受渡し・日時・保管状態を記録し、完全性と追跡可能性を支えます。'},
-{t:'バックアップ',q:'侵害された管理者アカウントからも改ざんされにくいバックアップ設計は？',a:'オフラインまたはイミュータブルなコピーを保持する',w:['本番と同じ権限で常時書込可能にする','バックアップを一つだけ保管する','復元テストをしない'],e:'分離された変更不可コピーは、侵害やランサムウェアから復旧手段を守ります。'},
-{t:'RPO',q:'RPOが2時間の場合に示す目標は？',a:'復旧時に許容するデータ損失の時間幅',w:['サービス復旧までの絶対上限','攻撃者の滞在時間','監査ログ保存期間'],e:'RPOは復旧点目標で、許容可能なデータ損失の時間幅を示します。停止から復旧する時間はRTOです。'},
-{t:'事後レビュー',q:'インシデント対応後、根本原因と改善点を記録する作業は？',a:'教訓の整理と対応計画の改善',w:['証拠の改変','認証情報の共有','検知前の承認'],e:'事後レビューで根本原因、対応の有効性、改善事項を整理して計画・統制へ反映します。'},
-{t:'ログ保護',q:'管理者によるログ改ざんを見つけやすくする設計は？',a:'ログを集中保管し、アクセス制限と改変検知を行う',w:['各端末だけに保存する','全員へ削除権限を与える','監査ログを無効化する'],e:'集中保管、権限分離、完全性保護により、ログの改ざんや削除を検出しやすくします。'},
-{t:'変更管理',q:'本番環境への緊急変更であっても行うべき管理は？',a:'承認・記録・事後レビューを定めた緊急変更手順に従う',w:['記録せず直接変更する','全ての変更を無期限に禁止する','共有アカウントで実行する'],e:'緊急時も簡略化された承認・記録・事後確認を行い、可用性と統制を両立します。'},
-{t:'パッチ管理',q:'インターネット公開サーバーに悪用中の重大脆弱性が判明した時の優先対応は？',a:'影響を評価し、緊急パッチまたは暫定緩和策を適用する',w:['次回の年次更新まで待つ','脆弱性情報を削除する','監視を止める'],e:'悪用状況と資産重要度を踏まえ、迅速な修正や暫定措置、検証を優先します。'},
-{t:'物理セキュリティ',q:'データセンターへの不正侵入を抑え、侵入経路を追跡する対策の組合せは？',a:'入退室認証、訪問者管理、監視記録',w:['全入口を常時開放','来訪者の記録を残さない','共用カードを全員に配布'],e:'多層の物理アクセス制御と記録により、不正侵入の予防と追跡を支援します。'},
-{t:'BCP訓練',q:'事業継続計画が実際に機能するか確かめる最も有効な方法は？',a:'役割・連絡・復旧手順を含む定期的な演習を行う',w:['文書を作成して保管するだけ','訓練記録を廃棄する','復旧責任者を決めない'],e:'演習で手順や依存関係を確認し、問題点を是正して計画を更新します。'}
-]},
-{name:'ドメイン8｜ソフトウェア開発セキュリティ',scenes:['決済Webアプリ','医療記録API','クラウド管理画面','モバイルアプリ','社内人事システム','CI/CDパイプライン','コンテナサービス','外部ライブラリを使う製品','認証機能の開発','本番リリース工程'],seeds:[
-{t:'SAST',q:'コードを実行せずソースやバイトコードを解析するテストは？',a:'静的アプリケーションセキュリティテスト（SAST）',w:['DAST','負荷テスト','災害復旧テスト'],e:'SASTはコードを実行せずに解析します。稼働中のアプリを外部から調べるのはDASTです。'},
-{t:'DAST',q:'稼働中のWebアプリへリクエストを送り、外部から見える弱点を調べる方法は？',a:'動的アプリケーションセキュリティテスト（DAST）',w:['SAST','静的構成分析だけ','ソース署名'],e:'DASTは実行中のアプリケーションの挙動を外部から評価します。'},
-{t:'SQLインジェクション',q:'SQLインジェクションを防ぐ実装として優先すべきものは？',a:'パラメーター化クエリを使う',w:['入力をSQL文字列へ直接連結する','DBをインターネットへ公開する','エラー処理を無効にする'],e:'パラメーター化クエリはSQL構文と入力値を分離し、入力が命令として解釈される危険を下げます。'},
-{t:'出力エンコード',q:'利用者入力をHTMLへ表示する際、スクリプト実行を防ぐ基本対策は？',a:'出力先の文脈に応じて適切にエンコードする',w:['入力をそのままHTMLへ挿入する','全ての認証を無効にする','DBバックアップを増やす'],e:'HTML、属性、JavaScriptなど出力文脈に合わせたエンコードで、入力を実行可能なコードとして扱わないようにします。'},
-{t:'脅威モデリング',q:'設計段階で資産、脅威、攻撃経路、対策を整理する利点は？',a:'設計変更が容易なうちにリスクを減らせる',w:['全テストを省略できる','本番後の修正が不要になる','認証をなくせる'],e:'脅威モデリングを早期に行うと、アーキテクチャや要件へ低コストで対策を反映できます。'},
-{t:'シークレット管理',q:'CI/CDパイプライン内のAPIキーをソースコードへ平文で置かない方法は？',a:'アクセス制御されたシークレット管理機能から実行時に取得する',w:['公開リポジトリに保存する','ログへ出力する','全開発者で同じキーを使う'],e:'シークレット管理と最小権限、ローテーションで認証情報の露出と影響範囲を抑えます。'},
-{t:'SBOM',q:'製品に含まれるライブラリ名・版・依存関係を把握する資料は？',a:'ソフトウェア部品表（SBOM）',w:['ネットワークACL','データ分類表','入退室記録'],e:'SBOMはコンポーネントと依存関係の把握を支援し、脆弱性や供給網リスク対応に役立ちます。'},
-{t:'コード署名',q:'リリースパッケージが承認された発行者から届き、改変されていないか確認する手段は？',a:'信頼された鍵によるコード署名の検証',w:['ファイル名の確認だけ','圧縮率の確認','利用者レビューだけ'],e:'デジタル署名の検証で発行者と完全性を確認します。鍵管理と信頼チェーンも必要です。'},
-{t:'コードレビュー',q:'重要な変更を本番へ反映する前に別の開発者が確認する主な目的は？',a:'欠陥や危険な実装を独立した視点で発見する',w:['開発記録をなくす','テストを不要にする','全ての変更を一人に集中する'],e:'ピアレビューは誤りや脆弱な実装を早期に見つけ、知識共有と変更統制を支援します。'},
-{t:'環境分離',q:'開発者が本番データを自由に使う危険を下げるための設計は？',a:'開発・テスト・本番を分離し、テストではマスキング済みデータを使う',w:['全環境を同じDBにする','本番認証情報を配布する','テストログを公開する'],e:'環境分離とテストデータのマスキングにより、誤操作や機密情報露出のリスクを減らします。'}
-]}
+const DOMAINS=[
+ {n:1,title:"セキュリティとリスクマネジメント",weight:16},
+ {n:2,title:"資産のセキュリティ",weight:10},
+ {n:3,title:"セキュリティアーキテクチャとエンジニアリング",weight:13},
+ {n:4,title:"通信とネットワークセキュリティ",weight:13},
+ {n:5,title:"アイデンティティとアクセス管理",weight:13},
+ {n:6,title:"セキュリティの評価とテスト",weight:12},
+ {n:7,title:"セキュリティ運用",weight:13},
+ {n:8,title:"ソフトウェア開発セキュリティ",weight:10}
 ];
-const contexts=[['設計レビューで','障害対応中に','監査指摘を受けて','新サービス導入時に','委託先を評価して','権限見直しで','重大変更の前に','利用者から報告を受け','復旧計画を更新して','定期点検で'],['要件定義で','データ移行中に','保存期間を見直して','外部共有の前に','端末紛失の報告後','バックアップ作業で','廃棄委託の前に','法的保全通知を受け','資産棚卸しで','監査準備で'],['アーキテクチャ設計で','新しい脅威を評価して','障害時の動作を設計して','権限を見直して','クラウド移行の前に','起動処理を設計して','ベンダー機器を選定して','API境界を定義して','物理設備を更新して','設計レビューで'],['経路を新設する際に','通信障害の調査中に','無線監視で','外部公開の前に','委託接続を更新して','拠点間接続で','管理通信を見直して','DNS変更の前に','DoSを検知して','端末接続を許可する前に'],['新規利用者を登録して','職務異動の通知後','管理者アクセスを申請して','SSO連携の設計で','認証失敗を調査して','定期レビューで','外部ユーザーを招待して','退職手続きで','物理入館権を設定して','特権セッションを監査して'],['評価計画の作成時に','スキャン結果を受けて','監査証拠を集めて','例外指摘を確認して','再テストを計画して','クラウド統制を評価して','経営報告を準備して','評価者を割り当てて','指標を見直して','是正期限を迎えて'],['アラートを受けて','端末感染を確認して','証拠を取得して','復旧目標を設定して','バックアップを設計して','本番変更を申請して','物理侵入を検知して','ログの改変を疑い','演習を計画して','脆弱性情報を受けて'],['設計時に','コードレビューで','リリース前に','依存関係を更新して','CI/CDを構築して','APIを公開する前に','本番データを使う要望があり','入力処理を実装して','コンテナを配布して','セキュリティテストで']];
-const sel=document.querySelector('#domain'),area=document.querySelector('#quiz'),count=document.querySelector('#count'),progress=document.querySelector('#progress'),reviewWrong=document.querySelector('#reviewWrong'),startTestButton=document.querySelector('#startTest'),resumeTestButton=document.querySelector('#resumeTest');
-sel.innerHTML='<option value="all">全ドメイン混合（800問）</option>'+domains.map((d,i)=>`<option value="${i}">${d.name}（100問）</option>`).join('');
-let items=[],i=0,score=0,correctByDomain=[],reviewMode=false,testMode=false,testAnswers=[];
-const missedKey='cissp-missed-v1';
-const testKey='cissp-exam-v1';
-function getMissed(){try{return JSON.parse(localStorage.getItem(missedKey)||'[]')}catch{return[]}}
-function saveMissed(ids){try{localStorage.setItem(missedKey,JSON.stringify([...ids]))}catch{}updateReviewButton()}
-function updateReviewButton(){const n=getMissed().length;reviewWrong.textContent=`間違えた問題を復習（${n}問）`;reviewWrong.disabled=n===0}
-function getSavedTest(){try{const s=JSON.parse(localStorage.getItem(testKey)||'null');return s&&Array.isArray(s.ids)&&s.ids.length===80?s:null}catch{return null}}
-function updateResumeButton(){resumeTestButton.classList.toggle('hidden',!getSavedTest())}
-function saveTest(){if(!testMode)return;try{localStorage.setItem(testKey,JSON.stringify({ids:items.map(x=>x.id),answers:testAnswers,index:i}))}catch{}updateResumeButton()}
-function allItems(){return domains.flatMap((_,di)=>makeItems(di))}
-function shuffle(list){const a=[...list];for(let n=a.length-1;n>0;n--){const j=Math.floor(Math.random()*(n+1));[a[n],a[j]]=[a[j],a[n]]}return a}
-function buildTest(){return shuffle(domains.flatMap((_,di)=>shuffle(makeItems(di)).slice(0,10)))}
-function makeItems(domainIndex){const d=domains[domainIndex],out=[];d.seeds.forEach((s,si)=>d.scenes.forEach((scene,ci)=>{const q=`${scene}で${contexts[domainIndex][ci]}、${s.q}`;let opts=[{text:s.a,ok:true},...s.w.map(text=>({text,ok:false}))];const shift=(si+ci)%4;opts=opts.slice(shift).concat(opts.slice(0,shift));out.push({domain:d.name,topic:s.t,q,opts,why:s.e,id:`${domainIndex}:${si}:${ci}`})}));return out}
-function start(itemsToUse,isReview=false){items=itemsToUse;i=0;score=0;reviewMode=isReview;correctByDomain=domains.map(d=>({name:d.name,correct:0,total:0}));if(items.length)render();else{count.textContent='0 / 0';progress.style.width='0';area.innerHTML='<div class="result"><h1>復習する問題はありません</h1><p>不正解の問題はすべて解き直せています。</p></div>'}updateReviewButton()}
-function load(){const v=sel.value;let next=v==='all'?domains.flatMap((_,di)=>makeItems(di)):makeItems(Number(v));if(v==='all')next.sort(()=>Math.random()-.5);start(next)}
-function loadWrong(){const missed=new Set(getMissed()),all=domains.flatMap((_,di)=>makeItems(di));start(all.filter(x=>missed.has(x.id)),true)}
-function startTest(itemsToUse,answers=[],index=0){items=itemsToUse;i=Math.max(0,Math.min(index,items.length-1));score=0;reviewMode=false;testMode=true;testAnswers=items.map((_,n)=>Number.isInteger(answers[n])?answers[n]:null);correctByDomain=domains.map(d=>({name:d.name,correct:0,total:0}));saveTest();render()}
-function beginTest(){startTest(buildTest())}
-function resumeTest(){const saved=getSavedTest();if(!saved)return;const map=new Map(allItems().map(x=>[x.id,x])),restored=saved.ids.map(id=>map.get(id));if(restored.some(x=>!x)){localStorage.removeItem(testKey);updateResumeButton();return}startTest(restored,saved.answers,saved.index)}
-function exitTest(){saveTest();testMode=false;area.innerHTML='<div class="result"><span class="tag">途中保存しました</span><h1>テストを保存しました</h1><p>続きは「保存したテストを再開」から再開できます。</p><button class="primary" id="resumeNow">テストを再開</button></div>';count.textContent=`${i+1} / ${items.length}`;progress.style.width=`${i/items.length*100}%`;area.querySelector('#resumeNow').addEventListener('click',resumeTest);updateResumeButton()}
-function render(){const x=items[i];count.textContent=`${i+1} / ${items.length}`;progress.style.width=`${i/items.length*100}%`;if(testMode){const selected=testAnswers[i];area.innerHTML=`<span class="tag">全ドメイン混合テスト｜${x.domain}</span><h1>${x.q}</h1><fieldset><legend>最も適切なものを1つ選んでください</legend>${x.opts.map((o,j)=>`<label class="choice"><input type="radio" name="ans" value="${j}" ${selected===j?'checked':''}><span>${o.text}</span></label>`).join('')}</fieldset><button class="primary" id="nextTest">${i===items.length-1?'採点して結果を見る':'次の問題へ'}</button><button class="secondary" id="saveAndExit">途中保存して終了</button>`;area.querySelectorAll('input').forEach(e=>e.addEventListener('change',()=>{testAnswers[i]=Number(e.value);saveTest()}));area.querySelector('#nextTest').addEventListener('click',()=>{if(i<items.length-1){i++;saveTest();render()}else finishTest()});area.querySelector('#saveAndExit').addEventListener('click',exitTest);return}area.innerHTML=`<span class="tag">${reviewMode?'不正解の復習｜':''}${x.domain}｜${x.topic}</span><h1>${x.q}</h1><fieldset><legend>最も適切なものを1つ選んでください</legend>${x.opts.map((o,j)=>`<label class="choice"><input type="radio" name="ans" value="${j}"><span>${o.text}</span></label>`).join('')}</fieldset><button class="primary" id="check" disabled>回答する</button><div id="feedback" class="feedback hidden" role="status"></div><button class="secondary hidden" id="next">${i===items.length-1?'結果を見る':'次の問題へ'}</button>`;area.querySelectorAll('input').forEach(e=>e.addEventListener('change',()=>area.querySelector('#check').disabled=false));area.querySelector('#check').addEventListener('click',()=>{const n=Number(area.querySelector('input:checked').value),ok=x.opts[n].ok,missed=new Set(getMissed());if(ok){score++;missed.delete(x.id)}else missed.add(x.id);saveMissed(missed);const r=correctByDomain.find(d=>d.name===x.domain);r.total++;if(ok)r.correct++;const box=area.querySelector('#feedback');box.className='feedback '+(ok?'good':'bad');box.innerHTML=`<strong>${ok?'正解です':'不正解です'}｜正解：${x.opts.find(o=>o.ok).text}</strong>${x.why}`;area.querySelectorAll('input').forEach(e=>e.disabled=true);area.querySelector('#check').classList.add('hidden');area.querySelector('#next').classList.remove('hidden')});area.querySelector('#next').addEventListener('click',()=>{if(i<items.length-1){i++;render()}else finish()})}
-function finishTest(){const missed=new Set(getMissed()),rows=[];score=0;correctByDomain=domains.map(d=>({name:d.name,correct:0,total:0}));items.forEach((x,n)=>{const answer=testAnswers[n],ok=answer!==null&&x.opts[answer]?.ok,r=correctByDomain.find(d=>d.name===x.domain);r.total++;if(ok){score++;missed.delete(x.id)}else{missed.add(x.id);rows.push(`<li><strong>${x.domain}｜${x.topic}</strong><br>${x.q}<br>正解：${x.opts.find(o=>o.ok).text}<br>${x.why}</li>`)}});saveMissed(missed);localStorage.removeItem(testKey);testMode=false;updateResumeButton();progress.style.width='100%';count.textContent=`${items.length} / ${items.length}`;const domainRows=correctByDomain.map(x=>`<li><span>${x.name}</span><strong>${x.correct} / ${x.total}</strong></li>`).join('');area.innerHTML=`<div class="result"><span class="tag">80問テスト完了</span><h1>テスト結果</h1><div class="score">${score} / ${items.length}</div><p>分野別の結果です。未回答は不正解として集計しました。</p><ul class="result-list">${domainRows}</ul>${rows.length?`<h2>間違えた問題</h2><ul class="result-list">${rows.join('')}</ul>`:'<p>全問正解です。</p>'}<button class="primary" id="reviewAgain" ${getMissed().length?'':'disabled'}>間違えた問題を復習（${getMissed().length}問）</button><button class="secondary" id="newTest">もう一度80問テスト</button></div>`;area.querySelector('#reviewAgain').addEventListener('click',loadWrong);area.querySelector('#newTest').addEventListener('click',beginTest)}
-function finish(){progress.style.width='100%';count.textContent=`${items.length} / ${items.length}`;const rows=correctByDomain.filter(x=>x.total).map(x=>`<li><span>${x.name}</span><strong>${x.correct} / ${x.total}</strong></li>`).join('');const missedCount=getMissed().length;area.innerHTML=`<div class="result"><span class="tag">${reviewMode?'復習完了':'クイズ完了'}</span><h1>おつかれさまでした</h1><div class="score">${score} / ${items.length}</div><p>正解数です。分野別の結果を確認できます。</p>${rows?`<ul class="result-list">${rows}</ul>`:''}${missedCount?`<button class="primary" id="reviewAgain">間違えた問題を続けて復習（${missedCount}問）</button>`:''}<button class="secondary" id="retry">同じ範囲でもう一度</button></div>`;area.querySelector('#retry').addEventListener('click',load);area.querySelector('#reviewAgain')?.addEventListener('click',loadWrong)}
-sel.addEventListener('change',load);reviewWrong.addEventListener('click',loadWrong);startTestButton.addEventListener('click',beginTest);resumeTestButton.addEventListener('click',resumeTest);updateReviewButton();updateResumeButton();load();
+const bank=window.QUESTION_BANK||[];
+const select=document.getElementById("domain"),area=document.getElementById("quiz"),count=document.getElementById("count"),progress=document.getElementById("progress");
+const studyButton=document.getElementById("study"),examButton=document.getElementById("exam"),resumeButton=document.getElementById("resume"),reviewButton=document.getElementById("review"),saveNote=document.getElementById("saveNote");
+const wrongKey="cissp-wrong-v2",examKey="cissp-exam-v2";
+let items=[],index=0,answers=[],mode="home",locked=false,score=0;
+function esc(value){return String(value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function shuffle(list){const out=list.slice();for(let n=out.length-1;n>0;n--){const j=Math.floor(Math.random()*(n+1));[out[n],out[j]]=[out[j],out[n]]}return out}
+function getWrong(){try{return JSON.parse(localStorage.getItem(wrongKey)||"[]")}catch{return[]}}
+function setWrong(ids){try{localStorage.setItem(wrongKey,JSON.stringify(Array.from(ids)));updateHomeButtons()}catch{}}
+function savedExam(){try{const saved=JSON.parse(localStorage.getItem(examKey)||"null");return saved&&Array.isArray(saved.ids)&&saved.ids.length===bank.length?saved:null}catch{return null}}
+function updateHomeButtons(){const n=getWrong().length;reviewButton.textContent="間違えた問題を復習（"+n+"問）";reviewButton.disabled=n===0;resumeButton.classList.toggle("hidden",!savedExam())}
+function saveExam(){if(mode!=="exam")return;try{localStorage.setItem(examKey,JSON.stringify({ids:items.map(q=>q.id),answers:answers,index:index}));saveNote.textContent="回答と進み具合をこの端末に保存しました。"}catch{saveNote.textContent="このブラウザーでは保存できません。ページを閉じると回答が消える可能性があります。"}updateHomeButtons()}
+function domainTitle(n){const d=DOMAINS.find(x=>x.n===n);return d?d.title:""}
+function setRun(list,runMode){items=list;mode=runMode;index=0;score=0;answers=list.map(()=>null);locked=false;render()}
+function startStudy(){const d=select.value;let list=d==="all"?bank.slice():bank.filter(q=>q.d===Number(d));setRun(shuffle(list),"study")}
+function startExam(){setRun(shuffle(bank),"exam");saveExam()}
+function startReview(){const ids=new Set(getWrong()),list=shuffle(bank.filter(q=>ids.has(q.id)));if(!list.length){home("復習する問題はありません。学習モードで問題に取り組んでください。");return}setRun(list,"review")}
+function resumeExam(){const saved=savedExam();if(!saved)return;const byId=new Map(bank.map(q=>[q.id,q])),list=saved.ids.map(id=>byId.get(id));if(list.some(q=>!q)){localStorage.removeItem(examKey);updateHomeButtons();home("問題セットが更新されたため、保存データを読み込めませんでした。新しい演習を始めてください。");return}items=list;mode="exam";answers=items.map((_,n)=>Number.isInteger(saved.answers[n])?saved.answers[n]:null);index=Math.max(0,Math.min(saved.index,items.length-1));locked=false;render()}
+function home(message){mode="home";items=[];count.textContent="";progress.style.width="0";area.innerHTML=message?'<p class="home-msg">'+esc(message)+'</p><p class="muted">上のボタンから次の学習を選んでください。</p>':'<div class="muted">学習方法を選ぶと、ここに問題が表示されます。</div>';updateHomeButtons()}
+function render(){if(!items.length){home();return}const q=items[index],total=items.length,isExam=mode==="exam",isReview=mode==="review";count.textContent=(index+1)+" / "+total;progress.style.width=(index/total*100)+"%";
+ const modeName=isExam?"模擬演習":isReview?"間違えた問題の復習":"学習";
+ const opts=q.choices.map((choice,n)=>'<label class="choice"><input type="radio" name="answer" value="'+n+'" '+(answers[index]===n?"checked":"")+' '+(locked?"disabled":"")+'><span>'+esc(choice)+'</span></label>').join("");
+ let html='<span class="tag">'+esc(modeName)+'｜ドメイン'+q.d+'｜'+esc(q.topic)+'</span><p class="meta">アウトライン '+esc(q.outline)+' ・ '+esc(domainTitle(q.d))+'</p><h1>'+esc(q.scenario)+'</h1><p><strong>'+esc(q.prompt)+'</strong></p><fieldset><legend>最も適切なものを1つ選んでください</legend>'+opts+'</fieldset>';
+ if(isExam){html+='<p class="save-note" id="answerSaved">'+(answers[index]===null?"未回答":"回答を保存済み")+'</p><div class="actions"><button class="tertiary" id="previous" '+(index===0?"disabled":"")+' type="button">前の問題</button><button class="primary" id="advance" type="button">'+(index===total-1?"採点して振り返る":"次の問題")+'</button></div><button class="secondary" id="saveExit" type="button">途中保存して終了</button>'}
+ else if(locked){html+='<div class="feedback '+(q.choices[answers[index]]&&answers[index]===q.answer?"good":"bad")+'"><strong>'+(answers[index]===q.answer?"正解":"不正解")+"｜正解："+esc(q.choices[q.answer])+'</strong><p>'+esc(q.explanation)+'</p></div><button class="primary" id="advance" type="button">'+(index===total-1?"結果を見る":"次の問題")+'</button>'}
+ else{html+='<button class="primary" id="check" type="button" disabled>回答を確認する</button>'}
+ area.innerHTML=html;
+ area.querySelectorAll('input[name="answer"]').forEach(function(input){input.addEventListener("change",function(){answers[index]=Number(input.value);if(isExam){saveExam();const label=document.getElementById("answerSaved");if(label)label.textContent="回答を保存済み"}else{document.getElementById("check").disabled=false}})});
+ if(isExam){document.getElementById("previous").addEventListener("click",function(){index--;saveExam();render()});document.getElementById("advance").addEventListener("click",function(){if(index<items.length-1){index++;saveExam();render()}else finishExam()});document.getElementById("saveExit").addEventListener("click",function(){saveExam();home("演習を途中保存しました。『保存した演習を再開』から続けられます。")})}
+ else if(locked){document.getElementById("advance").addEventListener("click",function(){if(index<items.length-1){index++;locked=false;render()}else finishStudy()})}
+ else{document.getElementById("check").addEventListener("click",function(){if(!Number.isInteger(answers[index]))return;locked=true;const q=items[index],missed=new Set(getWrong());if(answers[index]===q.answer){score++;missed.delete(q.id)}else missed.add(q.id);setWrong(missed);render()})}
+}
+function domainSummary(answerList){return DOMAINS.map(function(d){const group=items.map(function(q,n){return{q:q,a:answerList[n]}}).filter(function(x){return x.q.d===d.n});if(!group.length)return null;const right=group.filter(function(x){return x.a===x.q.answer}).length;return'<li><span>ドメイン'+d.n+'｜'+esc(d.title)+'</span><strong>'+right+' / '+group.length+'</strong></li>'}).filter(Boolean).join("")}
+function wrongCards(answerList){return items.map(function(q,n){if(answerList[n]===q.answer)return"";const selected=answerList[n]===null?"未回答":q.choices[answerList[n]];return'<article class="wrong-item"><strong>ドメイン'+q.d+'｜'+esc(q.topic)+'｜'+esc(q.outline)+'</strong><p>'+esc(q.scenario)+' '+esc(q.prompt)+'</p><p class="muted">あなたの回答：'+esc(selected)+'</p><p class="correct">正解：'+esc(q.choices[q.answer])+'</p><p>'+esc(q.explanation)+'</p></article>'}).join("")}
+function finishExam(){const missed=new Set(getWrong());let right=0;items.forEach(function(q,n){if(answers[n]===q.answer){right++;missed.delete(q.id)}else missed.add(q.id)});setWrong(missed);try{localStorage.removeItem(examKey)}catch{}mode="home";progress.style.width="100%";count.textContent=items.length+" / "+items.length;updateHomeButtons();const cards=wrongCards(answers);area.innerHTML='<div class="result"><span class="tag">64問の演習結果</span><h1>結果と解説</h1><div class="score">'+right+' / '+items.length+'</div><p>未回答は不正解として扱いました。分野ごとの結果を確認し、間違えた問題は復習できます。</p><ul class="result-list">'+domainSummary(answers)+'</ul><h2>見直す問題（'+(items.length-right)+'問）</h2>'+(cards||'<p>全問正解です。別の範囲の学習も続けましょう。</p>')+'<button class="primary" id="reviewAgain" '+(getWrong().length?"":"disabled")+' type="button">間違えた問題を復習</button><button class="secondary" id="again" type="button">新しい64問演習</button></div>';document.getElementById("reviewAgain").addEventListener("click",startReview);document.getElementById("again").addEventListener("click",startExam)}
+function finishStudy(){mode="home";progress.style.width="100%";count.textContent=items.length+" / "+items.length;const label=modeBeforeReview;const name=label==="review"?"復習":"学習";area.innerHTML='<div class="result"><span class="tag">'+name+'完了</span><h1>今回の結果</h1><div class="score">'+score+' / '+items.length+'</div><p>解説を確認して、間違えた問題はあとで復習しましょう。</p><button class="primary" id="reviewAgain" '+(getWrong().length?"":"disabled")+' type="button">間違えた問題を復習（'+getWrong().length+'問）</button><button class="secondary" id="homeAgain" type="button">別の範囲を学ぶ</button></div>';updateHomeButtons();document.getElementById("reviewAgain").addEventListener("click",startReview);document.getElementById("homeAgain").addEventListener("click",function(){home()})}
+let modeBeforeReview="study";
+function begin(runMode){modeBeforeReview=runMode;const d=select.value;let list=runMode==="review"?[]:(d==="all"?bank.slice():bank.filter(q=>q.d===Number(d)));setRun(shuffle(list),runMode)}
+select.innerHTML='<option value="all">全分野（'+bank.length+'問）</option>'+DOMAINS.map(function(d){const n=bank.filter(function(q){return q.d===d.n}).length;return'<option value="'+d.n+'">ドメイン'+d.n+'｜'+d.title+'（'+n+'問・比重'+d.weight+'%）</option>'}).join("");
+studyButton.addEventListener("click",function(){begin("study")});examButton.addEventListener("click",startExam);resumeButton.addEventListener("click",resumeExam);reviewButton.addEventListener("click",startReview);
+updateHomeButtons();home();
 </script>
-</body></html>
+</body>
+</html>
 
