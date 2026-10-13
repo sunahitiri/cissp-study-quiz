@@ -67,7 +67,7 @@ function domainTitle(n){const d=DOMAINS.find(x=>x.n===n);return d?d.title:""}
 function setRun(list,runMode){items=list;mode=runMode;index=0;score=0;answers=list.map(()=>null);locked=false;render()}
 function startStudy(){const d=select.value;let list=d==="all"?bank.slice():bank.filter(q=>q.d===Number(d));setRun(shuffle(list),"study")}
 function startExam(){setRun(shuffle(bank),"exam");saveExam()}
-function startReview(){const ids=new Set(getWrong()),list=shuffle(bank.filter(q=>ids.has(q.id)));if(!list.length){home("復習する問題はありません。学習モードで問題に取り組んでください。");return}setRun(list,"review")}
+function startReview(){const ids=new Set(getWrong()),list=shuffle(bank.filter(q=>ids.has(q.id)));if(!list.length){home("復習する問題はありません。学習モードで問題に取り組んでください。");return}modeBeforeReview="review";setRun(list,"review")}
 function resumeExam(){const saved=savedExam();if(!saved)return;const byId=new Map(bank.map(q=>[q.id,q])),list=saved.ids.map(id=>byId.get(id));if(list.some(q=>!q)){localStorage.removeItem(examKey);updateHomeButtons();home("問題セットが更新されたため、保存データを読み込めませんでした。新しい演習を始めてください。");return}items=list;mode="exam";answers=items.map((_,n)=>Number.isInteger(saved.answers[n])?saved.answers[n]:null);index=Math.max(0,Math.min(saved.index,items.length-1));locked=false;render()}
 function home(message){mode="home";items=[];count.textContent="";progress.style.width="0";area.innerHTML=message?'<p class="home-msg">'+esc(message)+'</p><p class="muted">上のボタンから次の学習を選んでください。</p>':'<div class="muted">学習方法を選ぶと、ここに問題が表示されます。</div>';updateHomeButtons()}
 function render(){if(!items.length){home();return}const q=items[index],total=items.length,isExam=mode==="exam",isReview=mode==="review";count.textContent=(index+1)+" / "+total;progress.style.width=(index/total*100)+"%";
